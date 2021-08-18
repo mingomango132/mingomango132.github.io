@@ -1,0 +1,91 @@
+<html>
+<!--if you need to look up a reference: explore https://www.w3schools.com/html/default.asp -->
+<head>
+    <title>The racing World</title>
+	
+	<style type=text/css>
+	
+		body{
+			background-color: #555655;
+			text-align: center;
+		}
+		h2{
+			margin:20px;
+		}
+		p{
+			margin:30px;
+		}
+		a{
+			margin:30px;
+		}
+		div.allthings{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+		}
+		div.header{
+			background-color:#2CD3BF;
+			width: 80%;
+			margin:20px;
+		}
+		div.content{
+			background-color:#38CFD0;
+			width: 50%;
+			margin:20px;
+		}
+	
+	</style>
+	
+</head>
+	
+<body>
+
+	<!--this div box contains all things on the page. It's useful to keep everything in a box so that you can format it easily-->
+	<div class="allthings">
+	
+		<!--This begins the different boxes you can have. The first box has a different style than the rest-->
+		<div id="title" class="header"><!--to modify the style, look at div.header in the style section-->
+			<h1>The racing World</h1>
+			<h3>Go To...</h2>
+			<!--these are links. You can set the destination to other sites or other parts of your page. If you want to 
+				go to a different part of the page, then you have to give that part an id such as "item1"-->
+			
+			<a href="#item1">F1</a>
+			<a href="#item2">Gt3 racing</a>
+			<a href="#item3">Gt1 racing</a>
+		</div>
+		<div id="item1" class="content"> <!--to modify the style, look at div.content in the style section-->
+			<h2>F1</h2>
+			<p> F1 is a noble racing sport where racers compete head to head  in top of the line  cars from  some of the greatest car companies of the era.</p>
+			<img max-width="100%"height="150pt" src="https://www.vortez.net/news_file/18278_mercedes-amg-f1-amd.jpg">
+		</div>
+		<div id="item2" class="content">
+			<h2>gt3</h2>
+			<p>Group GT3, known technically as Cup Grand Touring Cars and commonly referred to as simply GT3, is a set of regulations maintained by the Fédération Internationale de l'Automobile (FIA) for grand tourer racing cars designed for use in various auto racing series throughout the world.</p>
+			<img max-width="100%"height="150pt" src="https://cdn.motor1.com/images/mgl/38wvX/s1/2019-lamborghini-huracan-gt3-evo.jpg">
+		</div>
+		<div id="item3" class="content">
+			<h2>Gt1 racing</h2>
+			<p>Group GT1 also known simply as GT1, was a set of regulations maintained formerly by the Fédération Internationale de l'Automobile, for Grand Tourer racing. The category was first created in 1994, as the top class of the BPR Global GT Series, and was included in the 24 Hours of Le Mans.</p>
+			<img max-width="100%"height="150pt" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxrohYL3gbibE1SC5SzmMVjDtMxPHeQx6Qw&usqp=CAU">
+		</div>
+		<a href="#title">Back to top</a>
+	
+	</div>
+	<!--id is used to specify a single element. Only this div will have this id "tim"-->
+<div id="tim" class="farts"> </div>
+</body>
+
+<script><!--Javascript code: Code here acts after creating the page--> 	//java code has a different comment notation 
+//list of emoji id numbers 	 //racing car, ambulance, firetruck,... add more here by adding the "HTML Dec" Number for the emoji's that you want to add
+const emojis_cars = [ 127950];
+//generate a random number in the range of the "emojis_cars" array 
+var randomNumber = Math.floor(Math.random()*emojis_cars.length);
+//put the emoji id number into the format the html page will accept (&#000000)
+var thisEmoji = "&#"+emojis_cars[randomNumber].toString();
+//insert into div named tim 	
+document.getElementById("tim").innerHTML = ( thisEmoji );
+</script>
+
+</html>
